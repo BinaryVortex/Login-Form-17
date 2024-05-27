@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Disandu Perera | Stylish Login/Register Form</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Kaushan Script', cursive;
+        }
+
+        .sub-page {
+            height: 100%;
+            width: 100%;
+            background-image: url(wallhaven-l8q1qy.jpg);
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-box {
+            width: 350px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            text-align: center;
+        }
+
+        .form-box h1 {
+            margin-bottom: 20px;
+            color: orangered;
+        }
+
+        .form input {
+            font-family: sans-serif;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            width: 100%;
+            margin: 10px 0;
+            padding: 15px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        .form button {
+            font-family: sans-serif;
+            width: 100%;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+            padding: 15px;
+            border: none;
+            background: coral;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .form button:hover {
+            background: darkorange;
+        }
+
+        .form .message {
+            font-size: 12px;
+            margin: 15px 0 0;
+        }
+
+        .form .message a {
+            color: orangered;
+            text-decoration: none;
+        }
+
+        .form .register-form {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sub-page">
+        <div class="form-box">
+            <div class="form">
+                <form class="login-form">
+                    <h1 class="main-heading">Login Form</h1>
+                    <input type="text" placeholder="User Name" />
+                    <input type="password" placeholder="Password" />
+                    <button>LOGIN</button>
+                    <p class="message">Not Registered? <a href="#">Register</a></p>
+                </form>
+                <form class="register-form">
+                    <h1 class="main-heading">Register Form</h1>
+                    <input type="text" placeholder="User Name" />
+                    <input type="text" placeholder="Email" />
+                    <input type="password" placeholder="Password" />
+                    <button>REGISTER</button>
+                    <p class="message">Already Registered? <a href="#">Login</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+    <script>
+        $('.message a').click(function () {
+            $('form').animate({ height: "toggle", opacity: "toggle" }, "slow");
+        });
+    </script>
+</body>
+
+</html>
